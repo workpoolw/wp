@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/wp/static/css/main.7c5126bb.chunk.css",
+    "main.js": "/wp/static/js/main.457034f5.chunk.js",
+    "main.js.map": "/wp/static/js/main.457034f5.chunk.js.map",
+    "runtime-main.js": "/wp/static/js/runtime-main.8c260bfd.js",
+    "runtime-main.js.map": "/wp/static/js/runtime-main.8c260bfd.js.map",
+    "static/js/2.8811badc.chunk.js": "/wp/static/js/2.8811badc.chunk.js",
+    "static/js/2.8811badc.chunk.js.map": "/wp/static/js/2.8811badc.chunk.js.map",
+    "static/js/3.ccae3f16.chunk.js": "/wp/static/js/3.ccae3f16.chunk.js",
+    "static/js/3.ccae3f16.chunk.js.map": "/wp/static/js/3.ccae3f16.chunk.js.map",
+    "index.html": "/wp/index.html",
+    "static/css/main.7c5126bb.chunk.css.map": "/wp/static/css/main.7c5126bb.chunk.css.map",
+    "static/js/2.8811badc.chunk.js.LICENSE.txt": "/wp/static/js/2.8811badc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8c260bfd.js",
+    "static/js/2.8811badc.chunk.js",
+    "static/css/main.7c5126bb.chunk.css",
+    "static/js/main.457034f5.chunk.js"
+  ]
+}
