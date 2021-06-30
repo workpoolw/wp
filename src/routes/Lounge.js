@@ -35,7 +35,7 @@ function Lounge() {
                                     }
                                 } }>
                                     <div className="left">
-                                        <img src={ '/images/' + i.img + '.jpg' } alt="이미지"/>
+                                        <img src={ './images/' + i.img + '.jpg' } alt="이미지"/>
                                     </div>
                                     <div className="right">
                                         <h5>{ i.title }</h5>

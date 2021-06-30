@@ -21,7 +21,6 @@ function Main() {
                 <Visual />
                 <Categotry />
                 <Process />
-                {/* <View /> */}
                 <Matching />
                 <Sec1 />
             </div>
