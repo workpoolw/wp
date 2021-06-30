@@ -1,0 +1,718 @@
+// Import
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap'); // 'Noto Sans KR', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap'); // 'Fira Mono', monospace;
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css); // font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+
+// Breakpoint variable
+$lg: 1200px;
+$md: 770px;
+$sm: 550px;
+
+// Color variable
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+$lightgray: rgb(239, 239, 239);
+$gray: rgb(214, 214, 214);
+$darkgray: rgb(102, 102, 102);
+$lightblue: rgb(69, 100, 188);
+$blue: rgb(59, 76, 137);
+$darkblue: rgb(82, 99, 140);
+$point: rgb(245, 136, 136);
+
+// Common class
+.on {
+    display: block !important;
+}
+
+.off {
+    display: none !important;
+}
+
+.active {
+    z-index: 3;
+}
+
+.warning {
+    display: none;
+    margin-bottom: 20px;
+    text-align: center;
+    color: red;
+    font-size: 0.9rem;
+}
+
+.hidden {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+// Mixin
+@mixin ellipsis($lineCnt) {
+    display: -webkit-box;
+    -webkit-line-clamp: $lineCnt;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    word-wrap:break-word; 
+}
+
+// Common css
+* {
+    font-family: 'Spoqa Han Sans Neo', sans-serif !important;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+input, 
+textarea, 
+button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+}
+
+.material-icons {
+    font-family: 'Material Icons' !important;
+}
+
+// start
+.App {
+    position: relative;
+    .header {
+        height: 50px;
+        background-color: $blue;
+        border-bottom: 1px solid $darkblue;
+            svg {
+                position: absolute;
+                top: 5px;
+                left: 8px;
+                color: $white;
+                font-size: 2.5rem;
+                cursor: pointer;
+            }
+            h1 {
+                line-height: 50px;
+                text-align: center;
+                color: $white;
+                font: {
+                    size: 1.3rem;
+                    weight: bold;
+                }
+                span {
+                    padding-right: 10px;
+                    font-size: 0.9rem;
+                    vertical-align: bottom;
+                    color: $point;
+                }
+        }
+    }
+    .nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 10;
+        .black {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0,0,0,0.5);
+        }
+        ul {
+            display: table;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60%;
+            max-width: 500px;
+            height: 100vh;
+            background-color: $white;
+            padding: 50px;
+            li {
+                margin-bottom: 30px;
+                font: {
+                    size: 1.5rem;
+                    weight: bold;
+                }
+                &:first-child {
+                    text-align: right;
+                }
+                svg {
+                    font-size: 3rem;
+                    cursor: pointer;
+                    z-index: 11;
+                }
+            }
+            .login {
+                color: $blue;
+            }
+        }
+    }
+    .container {
+        .visual {
+            width: 100%;
+            height: 400px;
+            background-color: $blue;
+            .inner {
+                height: 100%;
+                position: relative;
+                .area {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 100%;
+                    height: 60px;
+                    ul {
+                        position: absolute;
+                        top: -115px;
+                        left: 32.5%;
+                        color: $point;
+                        font: {
+                            size: 3rem;
+                            weight: bold;
+                        }
+                        li {
+                            margin-bottom: 10px;
+                            &:nth-child(2) {
+                                margin-bottom: 75px;
+                            }
+                        }
+                    }
+                    h3 {
+                        line-height: 60px;
+                        text-align: center;
+                        color: $white;
+                        font: {
+                            size: 3rem;
+                            weight: bold;
+                        }
+                        span {
+                            color: $point;
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: $lg) {
+                .inner {
+                    width: $md;
+                    .area {
+                        ul {
+                            left: 27.5%;
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: $md) {
+                .inner {
+                    width: 370px;
+                    .area {
+                        ul {
+                            top: -60px;
+                            left: 23.2%;
+                            font-size: 1.7rem;
+                            li {
+                                &:nth-child(2) {
+                                    margin-bottom: 50px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .category {
+            .inner {
+                margin-bottom: 80px;
+                h4 {
+                    padding: 80px 0;
+                    text-align: center;
+                    line-height: 1.5;
+                    font: {
+                        size: 2rem;
+                        weight: bold;
+                    }
+                }
+                .area {
+                    ul {
+                        display: table;
+                        width: 500px;
+                        margin: auto;
+                        li {
+                            float: left;
+                            width: 50%;
+                            margin-bottom: 25px;
+                            text-align: center;
+                            &:nth-child(3),
+                            &:nth-child(4) {
+                                margin-bottom: 0;
+                            }
+                            svg {
+                                font-size: 3.5rem;
+                            }
+                            h5 {
+                                margin-top: 10px;
+                                text-align: center;
+                                font: {
+                                    size: 1.1rem;
+                                    weight: bold;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: $md) {
+                .inner {
+                    .area {
+                        ul {
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+        .process {
+            padding: 80px 0;
+            background-color: $blue;
+            overflow: hidden;
+            .inner {
+                h4 {
+                    margin: 0 auto 80px;
+                    text-align: center;
+                    color: $white;
+                    font: {
+                        size: 2rem;
+                        weight: bold;
+                    }
+                }
+                .left,
+                .right {
+                    float: left;
+                    width: 50%;
+                }
+                .left {
+                    ul {
+                        li {
+                            color: $white;
+                            &:nth-child(1) {
+                                height: 152px;
+                            }
+                            &:nth-child(2) {
+                                height: 96px;
+                            }
+                            &:nth-child(3) {
+                                height: 96px;
+                            }
+                            &:nth-child(4) {
+                                height: 152px;
+                            }
+                            font: {
+                                size: 1.5rem;
+                                weight: bold;
+                            }
+                            span {
+                                display: inline-block;
+                                margin-right: 10px;
+                                padding: 5px 8px;
+                                border-radius: 100px;
+                                background-color: $darkblue;
+                                vertical-align: middle;
+                                color: $white;
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .box {
+                        margin-top: 60px;
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                        > div {
+                            margin-bottom: 20px;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                            button {
+                                background-color: $darkblue;
+                                margin-right: 10px;
+                                color: $white;
+                                cursor: auto;
+                            }
+                            > span {
+                                color: $gray;
+                            }
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: $md) {
+                position: relative;
+                height: 838px;
+                .inner {
+                    .left,
+                    .right {
+                        float: none;
+                        width: 100%;
+                    }
+                    .left {
+                        ul {
+                            li {
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                    .right {
+                        position: absolute;
+                        top: 225px;
+                    }
+                }
+            }
+        }
+        .view {
+            padding: 50px;
+            background-color: greenyellow;
+        }
+        .matching {
+            .inner {
+                padding: 80px 0;
+                text-align: center;
+                h4 {
+                    margin-bottom: 80px;
+                    line-height: 1.5;
+                    font: {
+                        size: 2rem;
+                        weight: bold;
+                    }
+                }
+                img {
+                    margin-bottom: 80px;
+                }
+                p {
+                    line-height: 1.5;
+                    font: {
+                        size: 1.5rem;
+                        weight: bold;
+                    }
+                    span {
+                        text-decoration: underline;
+                        color: $point;
+                    }
+                }
+            }
+            @media screen and (max-width: $md) {
+                img {
+                    display: block;
+                    width: 90%;
+                    margin: auto;
+                }
+                p {
+                    font-size: 1.2rem !important;
+                }
+            }
+        }
+        .sec1 {
+            background-color: $darkblue;
+            .inner {
+                padding: 50px 0;
+                p {
+                    text-align: center;
+                    color: $white;
+                    font: {
+                        size: 1.5rem;
+                        weight: bold;
+                    }
+                    button {
+                        margin-left: 10px;
+                        background-color: $blue;
+                        color: $white;
+                    }
+                }
+                @media screen and (max-width: $md) {
+                    p {
+                        font-size: 1.2rem !important;
+                    }
+                }
+            }
+        }
+    }
+    .lounge {
+        .inner {
+            .top {
+                margin-bottom: 20px;
+                padding: 20px 0;
+                h4 {
+                    font-size: 1.5rem;
+                }
+            }
+            .box {
+                padding: 20px;
+                border-bottom: 1px solid $gray;
+                overflow: hidden;
+                &:last-child {
+                    margin-bottom: 50px;
+                }
+                .left,
+                .right {
+                    float: left;
+                }
+                .left {
+                    width: 30%;
+                    img {
+                        display: block;
+                        width: 90%;
+                    }
+                }
+                .right {
+                    width: 70%;
+                    h5 {
+                        height: 150px;
+                        text-align: left;
+                        line-height: 1.5;
+                        font-size: 1.5rem;
+                    }
+                    .user {
+                        margin: 5px 0;
+                        color: $darkgray;
+                        font-size: 1.2rem;
+                    }
+                    .startCnt {
+                        color: $darkblue;
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+            .bottom {
+                margin: 30px 0;
+                ul {
+                    display: table;
+                    margin: auto;
+                    li {
+                        float: left;
+                        padding: 10px;
+                        background-color: $lightblue;
+                        color: $white;
+                        cursor: pointer;
+                    }
+                }
+            }
+            @media screen and (max-width: $md) {
+                .box {
+                    .right {
+                        h5 {
+                            height: auto;
+                            font-size: 1.1rem;
+                        }
+                        .user {
+                            font-size: 0.9rem;
+                        }
+                        .startCnt {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sub {
+        .inner {
+            padding: 80px 0;
+            svg {
+                text-align: right;
+                font-size: 2.5rem;
+            }
+            .top {
+                padding-bottom: 80px;
+                border-bottom: 1px solid $gray;
+                h5 {
+                    line-height: 1.5;
+                    font-size: 1.3rem;
+                }
+            }
+            .middle {
+                margin: 30px auto 40px;
+                .default {
+                    max-width: 700px;
+                    margin: auto;
+                    overflow: hidden;
+                    .price_t,
+                    .price {
+                        text-align: right;
+                        font-size: 1.2rem;
+                    }
+                    .price {
+                        font-weight: bold;
+                    }
+                    .pay {
+                        margin: 20px auto;
+                        padding: 20px;
+                        border-radius: 10px;
+                        background-color: $lightgray;
+                        overflow: hidden;
+                        p {
+                            margin-bottom: 10px;
+                        }
+                        ul {
+                            float: left;
+                            li {
+                                float: left;
+                                padding: 10px;
+                                background-color: $white;
+                                cursor: pointer;
+                                &:first-child,
+                                &:nth-child(2) {
+                                    border-right: 1px solid $lightgray;
+                                }
+                            }
+                        }
+                        span {
+                            float: right;
+                            margin-top: 10px;
+                            font-weight: bold;
+                        }
+                    }
+                    button {
+                        display: block;
+                        width: 100%;
+                        max-width: 500px;
+                        margin: auto;
+                        padding: 20px 10px;
+                        background-color: $point;
+                        text-align: center;
+                        color: $white;
+                        &:last-child {
+                            margin-top: 10px;
+                            background-color: $blue;
+                        }
+                    }
+                }
+            }
+            .contents {
+                display: none;
+                width: 90%;
+                margin: 50px auto;
+            }
+            .bottom {
+                padding-top: 30px;
+                border-top: 1px solid $gray;
+                .username {
+                    margin-bottom: 10px;
+                    font: {
+                        size: 1.3rem;
+                        weight: bold;
+                    }
+                }
+                p {
+                    text-align: center;
+                }
+            }
+            .info {
+                margin-top: 20px;
+                text-align: center;
+                color: $darkgray;
+            }
+        }
+    }
+    .login {
+        height: calc(100vh - 50px - 122px);
+        padding-top: 100px;
+        h4 {
+            font-size: 1.5rem;
+        }
+        .area {
+            margin-top: 50px;
+            text-align: center;
+            label {
+                display: inline-block;
+                width: 80px;
+                margin-right: 10px;
+            }
+            input {
+                outline: 0;
+                border: 0;
+                width: 70%;
+                max-width: 300px;
+                margin-bottom: 20px;
+                padding: 10px;
+                background-color: $lightgray;
+            }
+            p {
+                margin-top: 10px;
+                color: $darkgray;
+                font-size: 0.9rem;
+                cursor: pointer;
+            }
+            button {
+                display: block;
+                width: 90%;
+                max-width: 500px;
+                margin: auto;
+                margin-top: 30px;
+                padding: 15px 5px;
+                background-color: $blue;
+                color: $white;
+                text-align: center;
+                font: {
+                    size: 1.1rem;
+                }
+            }
+        }
+    }
+    .footer {
+        background-color: $black;
+        color: $white;
+        .inner {
+            padding: 40px 0;
+            p {
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                span {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    // common
+    .inner {
+        width: 1000px;
+        margin: auto;
+        @media screen and (max-width: $lg) {
+            width: 90%;
+        }
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        text-align: center;
+        font: {
+            weight: bold;
+        }
+    }
+    @media screen and (max-width: $md) {
+        h3 {
+            font-size: 1.7rem !important;
+        }
+        h4 {
+            font-size: 1.4rem !important;
+        }
+    }
+}

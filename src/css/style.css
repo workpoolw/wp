@@ -1,0 +1,731 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+.on {
+  display: block !important;
+}
+
+.off {
+  display: none !important;
+}
+
+.active {
+  z-index: 3;
+}
+
+.warning {
+  display: none;
+  margin-bottom: 20px;
+  text-align: center;
+  color: red;
+  font-size: 0.9rem;
+}
+
+.hidden {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+* {
+  font-family: 'Spoqa Han Sans Neo', sans-serif !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+input,
+textarea,
+button {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+}
+
+.material-icons {
+  font-family: 'Material Icons' !important;
+}
+
+.App {
+  position: relative;
+}
+
+.App .header {
+  height: 50px;
+  background-color: #3b4c89;
+  border-bottom: 1px solid #52638c;
+}
+
+.App .header svg {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.App .header h1 {
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.App .header h1 span {
+  padding-right: 10px;
+  font-size: 0.9rem;
+  vertical-align: bottom;
+  color: #f58888;
+}
+
+.App .nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+}
+
+.App .nav .black {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.App .nav ul {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  max-width: 500px;
+  height: 100vh;
+  background-color: white;
+  padding: 50px;
+}
+
+.App .nav ul li {
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.App .nav ul li:first-child {
+  text-align: right;
+}
+
+.App .nav ul li svg {
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 11;
+}
+
+.App .nav ul .login {
+  color: #3b4c89;
+}
+
+.App .container .visual {
+  width: 100%;
+  height: 400px;
+  background-color: #3b4c89;
+}
+
+.App .container .visual .inner {
+  height: 100%;
+  position: relative;
+}
+
+.App .container .visual .inner .area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 60px;
+}
+
+.App .container .visual .inner .area ul {
+  position: absolute;
+  top: -115px;
+  left: 32.5%;
+  color: #f58888;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.App .container .visual .inner .area ul li {
+  margin-bottom: 10px;
+}
+
+.App .container .visual .inner .area ul li:nth-child(2) {
+  margin-bottom: 75px;
+}
+
+.App .container .visual .inner .area h3 {
+  line-height: 60px;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.App .container .visual .inner .area h3 span {
+  color: #f58888;
+}
+
+@media screen and (max-width: 1200px) {
+  .App .container .visual .inner {
+    width: 770px;
+  }
+  .App .container .visual .inner .area ul {
+    left: 27.5%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .App .container .visual .inner {
+    width: 370px;
+  }
+  .App .container .visual .inner .area ul {
+    top: -60px;
+    left: 23.2%;
+    font-size: 1.7rem;
+  }
+  .App .container .visual .inner .area ul li:nth-child(2) {
+    margin-bottom: 50px;
+  }
+}
+
+.App .container .category .inner {
+  margin-bottom: 80px;
+}
+
+.App .container .category .inner h4 {
+  padding: 80px 0;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.App .container .category .inner .area ul {
+  display: table;
+  width: 500px;
+  margin: auto;
+}
+
+.App .container .category .inner .area ul li {
+  float: left;
+  width: 50%;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.App .container .category .inner .area ul li:nth-child(3), .App .container .category .inner .area ul li:nth-child(4) {
+  margin-bottom: 0;
+}
+
+.App .container .category .inner .area ul li svg {
+  font-size: 3.5rem;
+}
+
+.App .container .category .inner .area ul li h5 {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 770px) {
+  .App .container .category .inner .area ul {
+    width: 80%;
+  }
+}
+
+.App .container .process {
+  padding: 80px 0;
+  background-color: #3b4c89;
+  overflow: hidden;
+}
+
+.App .container .process .inner h4 {
+  margin: 0 auto 80px;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.App .container .process .inner .left,
+.App .container .process .inner .right {
+  float: left;
+  width: 50%;
+}
+
+.App .container .process .inner .left ul li {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.App .container .process .inner .left ul li:nth-child(1) {
+  height: 152px;
+}
+
+.App .container .process .inner .left ul li:nth-child(2) {
+  height: 96px;
+}
+
+.App .container .process .inner .left ul li:nth-child(3) {
+  height: 96px;
+}
+
+.App .container .process .inner .left ul li:nth-child(4) {
+  height: 152px;
+}
+
+.App .container .process .inner .left ul li span {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 5px 8px;
+  border-radius: 100px;
+  background-color: #52638c;
+  vertical-align: middle;
+  color: white;
+  font-size: 1rem;
+}
+
+.App .container .process .inner .right .box {
+  margin-top: 60px;
+}
+
+.App .container .process .inner .right .box:first-child {
+  margin-top: 0;
+}
+
+.App .container .process .inner .right .box > div {
+  margin-bottom: 20px;
+}
+
+.App .container .process .inner .right .box > div:last-child {
+  margin-bottom: 0;
+}
+
+.App .container .process .inner .right .box > div button {
+  background-color: #52638c;
+  margin-right: 10px;
+  color: white;
+  cursor: auto;
+}
+
+.App .container .process .inner .right .box > div > span {
+  color: #d6d6d6;
+}
+
+@media screen and (max-width: 770px) {
+  .App .container .process {
+    position: relative;
+    height: 838px;
+  }
+  .App .container .process .inner .left,
+  .App .container .process .inner .right {
+    float: none;
+    width: 100%;
+  }
+  .App .container .process .inner .left ul li {
+    font-size: 1.2rem;
+  }
+  .App .container .process .inner .right {
+    position: absolute;
+    top: 225px;
+  }
+}
+
+.App .container .view {
+  padding: 50px;
+  background-color: greenyellow;
+}
+
+.App .container .matching .inner {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.App .container .matching .inner h4 {
+  margin-bottom: 80px;
+  line-height: 1.5;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.App .container .matching .inner img {
+  margin-bottom: 80px;
+}
+
+.App .container .matching .inner p {
+  line-height: 1.5;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.App .container .matching .inner p span {
+  text-decoration: underline;
+  color: #f58888;
+}
+
+@media screen and (max-width: 770px) {
+  .App .container .matching img {
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+  .App .container .matching p {
+    font-size: 1.2rem !important;
+  }
+}
+
+.App .container .sec1 {
+  background-color: #52638c;
+}
+
+.App .container .sec1 .inner {
+  padding: 50px 0;
+}
+
+.App .container .sec1 .inner p {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.App .container .sec1 .inner p button {
+  margin-left: 10px;
+  background-color: #3b4c89;
+  color: white;
+}
+
+@media screen and (max-width: 770px) {
+  .App .container .sec1 .inner p {
+    font-size: 1.2rem !important;
+  }
+}
+
+.App .lounge .inner .top {
+  margin-bottom: 20px;
+  padding: 20px 0;
+}
+
+.App .lounge .inner .top h4 {
+  font-size: 1.5rem;
+}
+
+.App .lounge .inner .box {
+  padding: 20px;
+  border-bottom: 1px solid #d6d6d6;
+  overflow: hidden;
+}
+
+.App .lounge .inner .box:last-child {
+  margin-bottom: 50px;
+}
+
+.App .lounge .inner .box .left,
+.App .lounge .inner .box .right {
+  float: left;
+}
+
+.App .lounge .inner .box .left {
+  width: 30%;
+}
+
+.App .lounge .inner .box .left img {
+  display: block;
+  width: 90%;
+}
+
+.App .lounge .inner .box .right {
+  width: 70%;
+}
+
+.App .lounge .inner .box .right h5 {
+  height: 150px;
+  text-align: left;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.App .lounge .inner .box .right .user {
+  margin: 5px 0;
+  color: #666666;
+  font-size: 1.2rem;
+}
+
+.App .lounge .inner .box .right .startCnt {
+  color: #52638c;
+  font-size: 1.1rem;
+}
+
+.App .lounge .inner .bottom {
+  margin: 30px 0;
+}
+
+.App .lounge .inner .bottom ul {
+  display: table;
+  margin: auto;
+}
+
+.App .lounge .inner .bottom ul li {
+  float: left;
+  padding: 10px;
+  background-color: #4564bc;
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 770px) {
+  .App .lounge .inner .box .right h5 {
+    height: auto;
+    font-size: 1.1rem;
+  }
+  .App .lounge .inner .box .right .user {
+    font-size: 0.9rem;
+  }
+  .App .lounge .inner .box .right .startCnt {
+    font-size: 0.8rem;
+  }
+}
+
+.App .sub .inner {
+  padding: 80px 0;
+}
+
+.App .sub .inner svg {
+  text-align: right;
+  font-size: 2.5rem;
+}
+
+.App .sub .inner .top {
+  padding-bottom: 80px;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.App .sub .inner .top h5 {
+  line-height: 1.5;
+  font-size: 1.3rem;
+}
+
+.App .sub .inner .middle {
+  margin: 30px auto 40px;
+}
+
+.App .sub .inner .middle .default {
+  max-width: 700px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.App .sub .inner .middle .default .price_t,
+.App .sub .inner .middle .default .price {
+  text-align: right;
+  font-size: 1.2rem;
+}
+
+.App .sub .inner .middle .default .price {
+  font-weight: bold;
+}
+
+.App .sub .inner .middle .default .pay {
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #efefef;
+  overflow: hidden;
+}
+
+.App .sub .inner .middle .default .pay p {
+  margin-bottom: 10px;
+}
+
+.App .sub .inner .middle .default .pay ul {
+  float: left;
+}
+
+.App .sub .inner .middle .default .pay ul li {
+  float: left;
+  padding: 10px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.App .sub .inner .middle .default .pay ul li:first-child, .App .sub .inner .middle .default .pay ul li:nth-child(2) {
+  border-right: 1px solid #efefef;
+}
+
+.App .sub .inner .middle .default .pay span {
+  float: right;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.App .sub .inner .middle .default button {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px 10px;
+  background-color: #f58888;
+  text-align: center;
+  color: white;
+}
+
+.App .sub .inner .middle .default button:last-child {
+  margin-top: 10px;
+  background-color: #3b4c89;
+}
+
+.App .sub .inner .contents {
+  display: none;
+  width: 90%;
+  margin: 50px auto;
+}
+
+.App .sub .inner .bottom {
+  padding-top: 30px;
+  border-top: 1px solid #d6d6d6;
+}
+
+.App .sub .inner .bottom .username {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.App .sub .inner .bottom p {
+  text-align: center;
+}
+
+.App .sub .inner .info {
+  margin-top: 20px;
+  text-align: center;
+  color: #666666;
+}
+
+.App .login {
+  height: calc(100vh - 50px - 122px);
+  padding-top: 100px;
+}
+
+.App .login h4 {
+  font-size: 1.5rem;
+}
+
+.App .login .area {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.App .login .area label {
+  display: inline-block;
+  width: 80px;
+  margin-right: 10px;
+}
+
+.App .login .area input {
+  outline: 0;
+  border: 0;
+  width: 70%;
+  max-width: 300px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #efefef;
+}
+
+.App .login .area p {
+  margin-top: 10px;
+  color: #666666;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.App .login .area button {
+  display: block;
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 30px;
+  padding: 15px 5px;
+  background-color: #3b4c89;
+  color: white;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.App .footer {
+  background-color: black;
+  color: white;
+}
+
+.App .footer .inner {
+  padding: 40px 0;
+}
+
+.App .footer .inner p {
+  margin-bottom: 10px;
+}
+
+.App .footer .inner p:last-child {
+  margin-bottom: 0;
+}
+
+.App .footer .inner p span {
+  margin-right: 10px;
+}
+
+.App .inner {
+  width: 1000px;
+  margin: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .App .inner {
+    width: 90%;
+  }
+}
+
+.App h1,
+.App h2,
+.App h3,
+.App h4,
+.App h5 {
+  text-align: center;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 770px) {
+  .App h3 {
+    font-size: 1.7rem !important;
+  }
+  .App h4 {
+    font-size: 1.4rem !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */
